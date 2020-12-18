@@ -13,9 +13,11 @@
 		229741B22587579E00627117 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 229741B02587579E00627117 /* Main.storyboard */; };
 		229741B4258757A100627117 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 229741B3258757A100627117 /* Assets.xcassets */; };
 		229741B7258757A100627117 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 229741B5258757A100627117 /* LaunchScreen.storyboard */; };
+		582A32BF0FBC5A8B82B2B961 /* Pods_RxLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD95307D6A34C409A3A588F6 /* Pods_RxLearning.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		220437C7258C3438002598EF /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		229741A72587579E00627117 /* RxLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		229741AA2587579E00627117 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		229741AC2587579E00627117 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,9 @@
 		229741B3258757A100627117 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		229741B6258757A100627117 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		229741B8258757A100627117 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		518F8632A411D79123A1B7E6 /* Pods-RxLearning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxLearning.debug.xcconfig"; path = "Target Support Files/Pods-RxLearning/Pods-RxLearning.debug.xcconfig"; sourceTree = "<group>"; };
+		603E634DF3066237FFF9B645 /* Pods-RxLearning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxLearning.release.xcconfig"; path = "Target Support Files/Pods-RxLearning/Pods-RxLearning.release.xcconfig"; sourceTree = "<group>"; };
+		AD95307D6A34C409A3A588F6 /* Pods_RxLearning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxLearning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +36,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				582A32BF0FBC5A8B82B2B961 /* Pods_RxLearning.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		220437C6258C3426002598EF /* Playground */ = {
+			isa = PBXGroup;
+			children = (
+				220437C7258C3438002598EF /* MyPlayground.playground */,
+			);
+			path = Playground;
+			sourceTree = "<group>";
+		};
 		2297419E2587579E00627117 = {
 			isa = PBXGroup;
 			children = (
 				229741A92587579E00627117 /* RxLearning */,
 				229741A82587579E00627117 /* Products */,
+				C64261C8E6037DB83D8E2C51 /* Pods */,
+				E8D642DA245CB6118D0FD433 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +72,7 @@
 		229741A92587579E00627117 /* RxLearning */ = {
 			isa = PBXGroup;
 			children = (
+				220437C6258C3426002598EF /* Playground */,
 				229741AA2587579E00627117 /* AppDelegate.swift */,
 				229741AC2587579E00627117 /* SceneDelegate.swift */,
 				229741AE2587579E00627117 /* ViewController.swift */,
@@ -67,6 +84,23 @@
 			path = RxLearning;
 			sourceTree = "<group>";
 		};
+		C64261C8E6037DB83D8E2C51 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				518F8632A411D79123A1B7E6 /* Pods-RxLearning.debug.xcconfig */,
+				603E634DF3066237FFF9B645 /* Pods-RxLearning.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E8D642DA245CB6118D0FD433 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD95307D6A34C409A3A588F6 /* Pods_RxLearning.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 229741BB258757A100627117 /* Build configuration list for PBXNativeTarget "RxLearning" */;
 			buildPhases = (
+				02247DD99E589775E144FBE0 /* [CP] Check Pods Manifest.lock */,
 				229741A32587579E00627117 /* Sources */,
 				229741A42587579E00627117 /* Frameworks */,
 				229741A52587579E00627117 /* Resources */,
+				0DDDF62A50508FC9A16EB30A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +167,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02247DD99E589775E144FBE0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxLearning-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0DDDF62A50508FC9A16EB30A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxLearning/Pods-RxLearning-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxLearning/Pods-RxLearning-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxLearning/Pods-RxLearning-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		229741A32587579E00627117 /* Sources */ = {
@@ -216,7 +294,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +349,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -283,6 +361,7 @@
 		};
 		229741BC258757A100627117 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 518F8632A411D79123A1B7E6 /* Pods-RxLearning.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +380,7 @@
 		};
 		229741BD258757A100627117 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 603E634DF3066237FFF9B645 /* Pods-RxLearning.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
