@@ -2,7 +2,7 @@ import UIKit
 import RxSwift
 
 enum MyError: Error {
-  case anError
+    case anError
 }
 
 public func example(of description: String, action: () -> Void) {
@@ -107,23 +107,82 @@ public func example(of description: String, action: () -> Void) {
 //    .disposed(by: disposeBag)
 //}
 
-example(of: "create") {
+//example(of: "create") {
+//    let disposeBag = DisposeBag()
+//
+//    Observable<String>.create { observer in
+//      // 1
+//      observer.onNext("1")
+//        observer.onError(MyError.anError)
+//
+//      // 2
+//      observer.onCompleted()
+//    // 3
+//      observer.onNext("?")
+//    // 4
+//      return Disposables.create()
+//    }.subscribe(
+//        onNext: { print($0) },
+//        onError: { print($0) },
+//        onCompleted: { print("Completed") },
+//        onDisposed: { print("Disposed") }
+//      )
+//    .disposed(by: disposeBag)
+//}
+/*
+ example(of: "create") {
+ enum MyError: Error {
+ case anError
+ }
+ let disposeBag = DisposeBag()
+ Observable<String>.create { observer in
+ // 1
+ observer.onNext("1")
+ //    observer.onError(MyError.anError)
+ // 2
+ //    observer.onCompleted()
+ // 3
+ observer.onNext("?")
+ // 4
+ return Disposables.create()
+ }
+ .subscribe(
+ onNext: { print($0) },
+ onError: { print($0) },
+ onCompleted: { print("Completed") },
+ onDisposed: { print("Disposed") }
+ )
+ //  .disposed(by: disposeBag)
+ */
+// code bài 8 ở đây
+/*
+example(of: "deferred") {
     let disposeBag = DisposeBag()
+    // 1
+    var flip = false
+    // 2
+    let factory: Observable<Int> = Observable.deferred {
+        // 3
+        flip = !flip
+        // 4
+        if flip {
+            return Observable.of(1, 2, 3)
+        } else {
+            return Observable.of(4, 5, 6)
+        }
+    }
     
-    Observable<String>.create { observer in
-      // 1
-      observer.onNext("1")
-      // 2
-      observer.onCompleted()
-    // 3
-      observer.onNext("?")
-    // 4
-      return Disposables.create()
-    }.subscribe(
-        onNext: { print($0) },
-        onError: { print($0) },
-        onCompleted: { print("Completed") },
-        onDisposed: { print("Disposed") }
-      )
-    .disposed(by: disposeBag)
+    for _ in 0...3 {
+        factory.subscribe(onNext: {
+            print($0, terminator: "")
+        })
+        .disposed(by: disposeBag)
+        print()
+    }
+}
+*/
+
+// code bai 9 o day
+example(of: "PublishSubject") {
+  let subject = PublishSubject<String>()
 }
